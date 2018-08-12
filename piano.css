@@ -1,0 +1,55 @@
+#myCanvas {
+	width: 1px;
+	background-color: purple;
+}
+body {
+	margin: 0;
+	background-color: black;
+	color: white;
+}
+.top	{
+	text-align: center;
+	background-color: purple;
+	margin: 0;
+	font-family: cursive;
+}
+h1 {
+	padding-top: 2%;
+	font-size: 230%;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+h3	{
+	padding-top: 0;
+	margin: 0;
+	padding-bottom: 3%;
+}
+
+.squares {
+	width: 40px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	float: left;
+}
+.notes {
+	text-align: center;
+	font-family: cursive;
+}
+.contains {
+	float: left;
+	width: 40px;
+}
+#container {
+	margin:10% auto;
+	width: 320px;
+}
+.pressed {
+	padding-bottom: 210px;
+	margin-bottom: 40px;
+}
+.unpressed {
+	padding-bottom: 250px;
+	margin: 0;
+}

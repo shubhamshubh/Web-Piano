@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Piano</title>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
+	<link rel="stylesheet" type="text/css" href="piano.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+		var keyData = {
+			a: {
+				sound: new Howl({
+		  		urls: ['sounds/a1.wav']
+				}),
+			},
+			s: {
+				sound: new Howl({
+		  		urls: ['sounds/s1.wav']
+				}),
+			},
+			d: {
+				sound: new Howl({
+		  		urls: ['sounds/d1.wav']
+				}),
+			},
+			f: {
+				sound: new Howl({
+		  		urls: ['sounds/f1.wav']
+				}),
+			},
+			g: {
+				sound: new Howl({
+		  		urls: ['sounds/g1.wav']
+				}),
+			},
+			h: {
+				sound: new Howl({
+		  		urls: ['sounds/h1.wav']
+				}),
+			},
+			j: {
+				sound: new Howl({
+		  		urls: ['sounds/j1.wav']
+				}),
+			},
+			k: {
+				sound: new Howl({
+		  		urls: ['sounds/k1.wav']
+				}),
+			}
+		}
+		function onKeyDown(event) {
+			if(keyData[event.key]){
+				keyData[event.key].sound.play();
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+	<div class="top">
+		<h1>Web-Piano</h1>
+		<h3>By shubhamshubh</h3>
+	</div>
+	<div id=container>
+		<div class="contains"><div class="squares unpressed" id="1"></div><div class="notes">C3</div></div>
+		<div class="contains"><div class="squares unpressed" id="2"></div><div class="notes">D3</div></div>
+		<div class="contains"><div class="squares unpressed" id="3"></div><div class="notes">E3</div></div>
+		<div class="contains"><div class="squares unpressed" id="4"></div><div class="notes">F3</div></div>
+		<div class="contains"><div class="squares unpressed" id="5"></div><div class="notes">G3</div></div>
+		<div class="contains"><div class="squares unpressed" id="6"></div><div class="notes">A3</div></div>
+		<div class="contains"><div class="squares unpressed" id="7"></div><div class="notes">B3</div></div>
+		<div class="contains"><div class="squares unpressed" id="8"></div><div class="notes">C4</div></div>
+	</div>
+</body>
+<script type="text/javascript" src="piano.js"></script>
+</html>
